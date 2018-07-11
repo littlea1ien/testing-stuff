@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+ <!-- Structure Style Sheets -->
+  <!--mew bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- mew bootstrap css -->
+  <!-- old bootstrap css -->
+  <!--<link rel="stylesheet" href="http://www2.follettlearning.com/eloqua/css/bootstrap.css">-->
+  <!-- old bootstrap css -->
+  <link rel="stylesheet" href="http://www2.follettlearning.com/eloqua/css/bootstrap-formhelpers.min.css">
+  <!-- Theme / Skin Style Sheets -->
+  <link rel="stylesheet" href="http://www2.follettlearning.com/eloqua/css/site-fl-css.css">
+  <link rel="stylesheet" href="http://www2.follettlearning.com/eloqua/css/follett.css">
+  <link type="text/css" rel="stylesheet" href="http://www2.follettlearning.com/eloqua/css/jquery.fancybox.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Main Site Scripts -->
+<!-- new Java scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- new Java scripts -->
+
+  <script src="http://www2.follettlearning.com/eloqua/js/jquery.fancybox.js" type="text/javascript"></script>
+  <script src="http://www2.follettlearning.com/eloqua/js/modernizr.custom.js"></script>
+  <script src="http://www2.follettlearning.com/eloqua/js/css3-mediaqueries.js"></script>
+  <script src="http://www2.follettlearning.com/eloqua/js/ie-emulation-modes-warning.js"></script>
+
+<!-- muori -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.4/muuri.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.4/muuri.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<!-- muori -->
+
+<!-- Muuri  styles -->
+<style type="text/css">
+.grid {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.8s linear 1s;
+}
+.images-loaded .grid {
+  opacity: 1;
+}
+.item {
+  position: absolute;
+  margin: 5px;
+  z-index: 1;
+}
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+.item-content {
+  position: relative;
+  cursor: pointer;
+}
+.item-content > img {
+  display: block;
+  border-radius: 6px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  transition: opacity 0.6s linear 0.4s;
+}
+.images-loaded .loading {
+  opacity: 0;
+}
+</style>
+<!-- Muuri  styles -->
+
+
+
+
+
+    <!-- footer and modal styles -->
+<style type="text/css">
+/* footer */
+.footer-link-item {
+font-size: 15px;
+line-height: 22px;
+}
+footer {background-position: 50% 0px;
+background-image: url(http://storage.pardot.com/398212/115824/chalkboard_background_footer.jpg);
+padding-bottom: 40px;}
+
+#footer-content > #footer-copyright > li {
+  display: inline-block;
+  font: normal 11px/11px Arial, sans-serif;
+  color: #B8BFCB;
+  margin-right: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #FFF;
+}
+
+#footer-content > #footer-copyright > ul {
+	text-align:center;
+}
+
+
+#footer-content #footer-copyright > li.first {
+  border-right: none;
+  margin-right: 4px;
+  padding: 0;
+  }
+  
+  #footer-content #footer-copyright > li.last {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+#footer-content #footer-copyright > li a {
+  color: #FFF;
+  text-decoration: none;
+  
+}
+
+#footer-content #footer-copyright {
+	padding-top:10px;
+	text-align:center;
+}
+
+#footer-content #footer-copyright > li.second {
+  border-right: none;
+  margin-right: 0px;
+  padding: 0;
+  }
+  
+   #footer-content ul {
+margin-left: 0px !important;
+padding-left: 0px !important;
+  } 
+
+
+#footer-links a {
+font: 12px/19px Arial,sans-serif;
+letter-spacing: 0.3px;
+color: #FFF;
+text-decoration: none;
+}
+
+@media (max-width: 767px) {
+#footer-content #footer-copyright > li.second {
+border-right-style: none !important;
+margin-bottom: 5px;
+margin-right: 0px !important;
+padding-right: 0px !important;
+  }
+  
+  #footer-content ul {
+margin-left: 0px !important;
+padding-left: 0px !important;
+  }
+
+
+
+
+}
+
+
+/* footer */
+
+
+
+
+/* modal styles */
+.box-shadow {
+	-moz-box-shadow: 0px 0px 5px #939598;
+	-webkit-box-shadow: 0px 0px 5px #939598;
+	box-shadow: 0px 0px 5px #939598;
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.fade.in {
+background: url(http://storage.pardot.com/398212/115746/19_04_204460_Teacher_Appreciation_Week_LP_modal_bg.png);
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.modal {
+	overflow-y: auto !important;
+}
+.modal-open {
+	overflow: auto !important;
+	overflow-x: hidden !important;
+}
+/* modal styles */
+
+
+.modal-open[style] {
+padding-right: 0px !important;
+}
+</style>
+<!--footer and modal styles -->
+
+  <style type="text/css">
+    /** header design styles **/
+
+    body, .body-class {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    background: url(../img/main-background.jpg) no-repeat center center fixed;
+    background-image: url(http://k12.follett.com/l/398212/2018-03-20/4d1nqc/398212/113324/_1a6a60b7_fcbd_4f38_b81c_474969640af4__bg_image.jpg);
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: #555;
+    font-size: 15px;
+    line-height: 22px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 60px 0;
+  }
+
+  #hero-img h1 {
+     font-size:3.75rem; 
+     line-height:4.0625rem;}
+
+
+a {
+  color: #07539a;
+}
+    #hero {
+
+      background-repeat: no-repeat;
+      background-color: #0c5b95;
+    }
+
+
+    #hero-img {
+      background-image: url(http://k12.follett.com/l/398212/2018-03-20/4d1nqf/398212/113326/_aecb54dc_d1a4_4453_bb72_102bec0fc9f5__collections_hero_1200x455.jpg);
+      background-repeat: no-repeat;
+      background-color: #0c5b95;
+     
+    }
+    /** blcok quote styles **/
+
+    blockquopte .authorQuote {
+      border-left: none 0px !important;
+      border: none 0px;
+    }
+
+    blockquote::before {
+      content: "\201C";
+      /*Unicode for Left Double Quote*/
+      /*Font*/
+      font-family: Georgia, serif;
+      font-size: 60px;
+      font-weight: bold;
+      color: #999;
+
+      /*Positioning*/
+      position: relative;
+      left: -6px;
+      top: 27px;
+    }
+
+    blockquote::after {
+      content: "\201D";
+      /*Unicode for Left Double Quote*/
+      /*Font*/
+      font-family: Georgia, serif;
+      font-size: 60px;
+      font-weight: bold;
+      color: #999;
+
+      /*Positioning*/
+      position: relative;
+      right: -6px;
+      bottom: -36px;
+      line-height: 0px;
+    }
+
+    /** blcok quote styles **/
+
+
+
+    /** blcok quote styles **/
+
+    #pen-mid-ya-nav .pageNav {
+      border: solid 1px rgb(255, 255, 255) !important;
+
+      line-height: 61px;
+      font-weight: 800;
+
+    }
+
+    .active {
+      color: rgb(0, 82, 156) !important;
+
+    }
+
+   
+    }
+
+@media (max-width: 575.98px) {    
+      #hero-img h1 {
+     font-size: 2.75rem !important; 
+     line-height: 2.0625rem !important;}
+     }
+
+
+    @media (max-width: 340px) {
+      .btn-group-justified &gt;
+      .btn,
+      .btn-group-justified &gt;
+      .btn-group {
+        display: block;
+        float: none;
+        width: 100%;
+      }
+      
+      #hero-img h1 {
+     font-size: 2.75rem !important; 
+     line-height: 2.0625rem !important;}
+    
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+<div class="loading">
+  Loading images...
+</div>
+<div class="grid">
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/12-facts.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/book-movie-compare.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/posters.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/quotes-1.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/reading-guide.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/sci-fi-article-1.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/spark-notes.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/teacher-resource.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/youtube-1.png" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-content">
+      <img src="../../html/grid-images/youtube-2.png" />
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+var grid = new Muuri('.grid', {
+  dragEnabled: true,
+  layout: {
+    fillGaps: true
+  }
+});
+
+// When all items have loaded refresh their
+// dimensions and layout the grid.
+window.addEventListener('load', function () {
+  grid.refreshItems().layout();
+  // For a little finishing touch, let's fade in
+  // the images after all them have loaded and
+  // they are corrertly positioned.
+  document.body.classList.add('images-loaded');
+});
+</script>
+
+
+</body>
+</html>
